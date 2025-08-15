@@ -20,6 +20,8 @@ async def _generate_with_ai_async(
         "OPENAI_BASE_URL", "https://api.openai.com/v1/chat/completions"
     )
 
+    model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {api_key}",
@@ -28,7 +30,7 @@ async def _generate_with_ai_async(
     if chat_with_nlp:
         # 结构化输出模式
         payload = {
-            "model": "gpt-4o",
+            "model": model,
             "messages": [
                 {
                     "role": "user",
@@ -52,7 +54,7 @@ async def _generate_with_ai_async(
     else:
         # 正常聊天对话模式
         payload = {
-            "model": "gpt-4o",
+            "model": model,
             "messages": [
                 {
                     "role": "user",

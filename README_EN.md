@@ -24,6 +24,7 @@ from vibe_helloworld import VibeHelloWorld
 # Set environment variables
 # export OPENAI_API_KEY="your_api_key_here"
 # export OPENAI_BASE_URL="https://api.openai.com/v1/chat/completions"  # Optional, defaults to official API
+# export OPENAI_MODEL="gpt-4o-mini"  # Optional, defaults to gpt-4o-mini
 
 # Structured output mode (default) - returns "hello world"
 result = VibeHelloWorld("This is my first AI project")
@@ -51,7 +52,8 @@ print(chat)  # AI's self-introduction
 ## Environment Variables
 
 - `OPENAI_API_KEY`: OpenAI API key (required)
-- `OPENAI_BASE_URL`: API base URL (optional, defaults to official address)
+- `OPENAI_BASE_URL`: API base URL (optional, defaults to official address)  
+- `OPENAI_MODEL`: Model to use (optional, defaults to `gpt-4o-mini`)
 
 ## License
 

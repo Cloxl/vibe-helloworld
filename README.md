@@ -24,6 +24,7 @@ from vibe_helloworld import VibeHelloWorld
 # 设置环境变量
 # export OPENAI_API_KEY="your_api_key_here"
 # export OPENAI_BASE_URL="https://api.openai.com/v1/chat/completions"  # 可选，默认使用官方地址
+# export OPENAI_MODEL="gpt-4o-mini"  # 可选，默认使用 gpt-4o-mini
 
 # 结构化输出模式（默认）- 返回 "hello world"
 result = VibeHelloWorld("This is my first AI project")
@@ -52,6 +53,7 @@ print(chat)  # AI的自我介绍
 
 - `OPENAI_API_KEY`: OpenAI API 密钥（必需）
 - `OPENAI_BASE_URL`: API 基础地址（可选，默认为官方地址）
+- `OPENAI_MODEL`: 使用的模型（可选，默认为 `gpt-4o-mini`）
 
 ## License
 
